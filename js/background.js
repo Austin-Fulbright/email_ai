@@ -1,5 +1,4 @@
 
-
 let tldLocales = {
     'com.au': 'create email',
 
@@ -17,5 +16,9 @@ let tldLocales = {
 });
 
 chrome.contextMenus.onClicked.addListener((item, tab) => {
-    console.log(item.selectionText)
+  // Store the selected text using the chrome.storage API.
+  chrome.storage.local.set({ 'selectedText': item.selectionText }, function() {
+    // After the selected text is stored, create a new window with new_message.html.
+    chrome.windows.create({ url: '../html/new_message.html', width: 500, height: 600, type: 'popup' });
+  });
 });
