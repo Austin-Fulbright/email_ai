@@ -9,5 +9,11 @@
     "background": {
       "service_worker": "js/background.js"
     },
-    "permissions": ["tabs", "activeTab", "desktopCapture","sidePanel", "contextMenus"]
+    "permissions": ["tabs", "activeTab", "desktopCapture","sidePanel", "contextMenus", "storage"],
+    "icons": {
+        "16": "images/email_ai-16_x_16.png",
+        "48": "images/email_ai-48_x_48.png",
+        "128": "images/email_ai-128_x_128.png"
+    }
 }
+
