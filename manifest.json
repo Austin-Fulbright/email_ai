@@ -1,0 +1,13 @@
+{
+    "name": "email_ai",
+    "description": "tbd",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "html/popup.html"
+    },
+    "background": {
+      "service_worker": "js/background.js"
+    },
+    "permissions": ["tabs", "activeTab", "desktopCapture","sidePanel", "contextMenus"]
+}
